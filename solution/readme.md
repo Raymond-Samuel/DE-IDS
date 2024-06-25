@@ -39,4 +39,4 @@ solution/
 `-- README.md
 
 ## Result Output
-![stdout ](images/result.png)
+![stdout ](result.png)
