@@ -34,20 +34,24 @@ def main():
 
     # Display the historical view of each table
     print("Accounts Table:")
-    print(accounts_df)
+    print(accounts_df.to_string())
+    print("\n")
 
-    print("\nCards Table:")
-    print(cards_df)
+    print("Cards Table:")
+    print(cards_df.to_string())
+    print("\n")
 
-    print("\nSaving Accounts Table:")
-    print(savings_accounts_df)
+    print("Saving Accounts Table:")
+    print(savings_accounts_df.to_string())
+    print("\n")
 
     # Join the tables to get a denormalized view
     joined_df = accounts_df.merge(cards_df, left_on='card_id', right_on='card_id', how='left', suffixes=('_account', '_card'))
     joined_df = joined_df.merge(savings_accounts_df, left_on='savings_account_id', right_on='savings_account_id', how='left', suffixes=('', '_saving_account'))
 
-    print("\nJoined Table:")
-    print(joined_df)
+    print("Joined Table:")
+    print(joined_df.to_string())
+    print("\n")
 
     # Identify transactions (changes in balance or credit used)
     transactions = []
@@ -61,8 +65,9 @@ def main():
 
     transactions_df = pd.DataFrame(transactions)
 
-    print("\nTransactions:")
-    print(transactions_df)
+    print("Transactions:")
+    print(transactions_df.to_string())
+    print("\n")
 
 if __name__ == "__main__":
     main()
