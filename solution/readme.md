@@ -40,9 +40,10 @@ solution/
 |-- requirements.txt
 |-- result.PNG
 `-- README.md
+```
 
 ## Result Output
 
-![Example Output](result.png)
+![Stdout](result.PNG)
 
 This image shows the standard output of the script, displaying the reconstructed historical tables, the denormalized table, and the identified transactions.
