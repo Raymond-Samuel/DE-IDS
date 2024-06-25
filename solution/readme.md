@@ -28,6 +28,8 @@ This solution processes event logs for `accounts`, `cards`, and `saving_accounts
 The script will print the historical tables, the joined table, and the identified transactions.
 
 ## Directory Structure
+
+```plaintext
 solution/
 |-- data/
 |   |-- accounts/
@@ -36,7 +38,11 @@ solution/
 |-- Dockerfile
 |-- main.py
 |-- requirements.txt
+|-- result.PNG
 `-- README.md
 
 ## Result Output
-![stdout ](result.png)
+
+![Example Output](result.png)
+
+This image shows the standard output of the script, displaying the reconstructed historical tables, the denormalized table, and the identified transactions.
